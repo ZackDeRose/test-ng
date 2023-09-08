@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "buildable-lib": {
+      "factory": "./src/generators/buildable-lib/generator",
+      "schema": "./src/generators/buildable-lib/schema.json",
+      "description": "buildable-lib generator"
+    }
+  }
+}
