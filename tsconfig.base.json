@@ -15,6 +15,12 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ng-test/buildable/test-lib/test-lib": [
+        "libs/buildable/test-lib/test-lib/src/index.ts"
+      ],
+      "@ng-test/buildable/test-lib}/test-lib": [
+        "libs/buildable/test-lib}/test-lib/src/index.ts"
+      ],
       "@ng-test/my-custom-plugin": ["tools/my-custom-plugin/src/index.ts"]
     }
   },

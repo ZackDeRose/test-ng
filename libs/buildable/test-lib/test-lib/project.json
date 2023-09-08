@@ -1,0 +1,37 @@
+{
+  "name": "buildable-test-lib-test-lib",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/buildable/test-lib/test-lib/src",
+  "prefix": "ng-test",
+  "tags": [],
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:ng-packagr-lite",
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}"],
+      "options": {
+        "project": "libs/buildable/test-lib/test-lib/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/buildable/test-lib/test-lib/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/buildable/test-lib/test-lib/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "libs/buildable/test-lib/test-lib/**/*.ts",
+          "libs/buildable/test-lib/test-lib/**/*.html",
+          "libs/buildable/test-lib/test-lib/package.json"
+        ]
+      }
+    }
+  }
+}
